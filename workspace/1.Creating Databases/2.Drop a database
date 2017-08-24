@@ -1,0 +1,7 @@
+/*Nestor Saavedra
+*/
+drop a database:
+
+DROP DATABASE database_name; 
+
+Once databasei is dropped, it's gone for good

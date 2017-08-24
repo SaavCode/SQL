@@ -1,0 +1,4 @@
+/*Nestor Saavedra
+  select all from dogs table
+*/
+SELECT * FROM dogsTable;

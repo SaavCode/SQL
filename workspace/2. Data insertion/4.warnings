@@ -1,0 +1,18 @@
+MySQL Warnings Code
+DESC dogsTable; 
+
+Inserting a dog with a long name:
+
+INSERT INTO dogsTable(name, age)
+VALUES('This rufrufrufrufurufrufurufurufuruf', 10);
+warning:
+
+SHOW WARNINGS; 
+
+Try inserting a dog with incorrect data types:
+
+INSERT INTO dogsTable(name, age) VALUES('buddy', 'rufrufruf'); 
+
+Then view the warning:
+
+SHOW WARNINGS; 

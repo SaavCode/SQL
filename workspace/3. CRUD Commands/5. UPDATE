@@ -1,0 +1,3 @@
+Change Husky dogs to playful:
+
+UPDATE dogsTable SET breed='playful' WHERE breed='Husky';

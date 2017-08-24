@@ -1,0 +1,12 @@
+some SELECT statements:
+SELECT * FROM dogs; 
+
+SELECT name FROM dogs; 
+
+SELECT age FROM dogs; 
+
+SELECT dog_id FROM dogs; 
+
+SELECT name, age FROM dogs; 
+
+SELECT dog_id, name, age, breed FROM dogs; 

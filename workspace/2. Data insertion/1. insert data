@@ -1,0 +1,11 @@
+/*Nestor Saavedra
+  data insertion
+*/
+/*
+Insert Data
+
+How to :
+
+INSERT INTO table_name(column_name) VALUES (data);
+*/
+INSERT INTO dogsTable(name, age) VALUES ('buddy', 3);

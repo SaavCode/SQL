@@ -1,0 +1,7 @@
+SELECT database();
+ 
+CREATE DATABASE shirts_db;
+ 
+use shirts_db;
+ 
+SELECT database();

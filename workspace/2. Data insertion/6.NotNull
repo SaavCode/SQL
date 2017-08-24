@@ -1,0 +1,16 @@
+Combining NOT NULL and DEFAULT:
+Define a table with a DEFAULT name specified:
+
+CREATE TABLE dogsTable6
+  (
+    name VARCHAR(20) DEFAULT 'no name provided',
+    age INT DEFAULT 999
+  );
+
+Combining NOT NULL and DEFAULT:
+
+CREATE TABLE dogsTable5
+  (
+    name VARCHAR(20) NOT NULL DEFAULT ‘unnamed’,
+    age INT NOT NULL DEFAULT 999
+  );

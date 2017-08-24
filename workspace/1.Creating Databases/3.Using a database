@@ -1,0 +1,9 @@
+/*Nestor Saavedra*/
+
+/*use*/
+USE <database name>;
+
+/*EXAMPLE*/
+
+ USE workout_app;
+SELECT database();

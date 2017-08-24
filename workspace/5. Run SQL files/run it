@@ -1,0 +1,10 @@
+mysql-ctl cli
+ 
+use dog_app;
+ 
+source first_file.sql
+ 
+DESC dogs;
+
+
+source testing/insert.sql

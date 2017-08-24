@@ -1,0 +1,35 @@
+NULL and NOT NULL Code
+Try inserting a cat without an age:
+
+INSERT INTO cats(name) VALUES('Alabama'); 
+
+SELECT * FROM dogsTable; 
+/*
+Try inserting a nameless and ageless dog:
+*/
+INSERT INTO dogsTable() VALUES(); 
+/*
+Define a new dogsTable2 table with NOT NULL constraints:
+*/
+CREATE TABLE dogsTable2
+  (
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL
+  );
+DESC dogsTable2; 
+/*
+Now try inserting an ageless cat:
+*/
+INSERT INTO dogsTable2(name) VALUES('sky'); 
+/*
+View the new warnings:
+*/
+SHOW WARNINGS; 
+
+SELECT * FROM dogsTable2; 
+/*
+Do the same for a nameless dog:
+*/
+INSERT INTO dogsTable2(age) VALUES(4); 
+
+SHOW WARNINGS; 

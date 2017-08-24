@@ -1,0 +1,11 @@
+Intro to WHERE
+Select by age:
+
+SELECT * FROM dogs WHERE age=23; 
+
+Select by name:
+
+SELECT * FROM dogs WHERE name='hussa'; 
+
+
+SELECT * FROM dogs WHERE name='huSsa'; 

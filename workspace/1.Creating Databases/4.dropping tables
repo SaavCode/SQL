@@ -1,0 +1,6 @@
+Dropping a Table
+DROP TABLE <tablename>; 
+
+example:
+
+DROP TABLE dogsTable; 

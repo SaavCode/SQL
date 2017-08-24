@@ -1,0 +1,41 @@
+Primary Keys
+Defining a table with a PRIMARY KEY constraint:
+
+CREATE TABLE unique_dogs
+  (
+    dog_id INT NOT NULL,
+    name VARCHAR(100),
+    age INT,
+    PRIMARY KEY (dog_id)
+  );
+DESC unique_dogs; 
+
+Insert some new dogs:
+
+INSERT INTO unique_dogs(cat_id, name, age) VALUES(1, 'rohn', 27);
+ 
+INSERT INTO unique_dogs(cat_id, name, age) VALUES(2, 'kohn', 23);
+ 
+INSERT INTO unique_dogs(cat_id, name, age) VALUES(1, 'nohn', 35);
+/*what happens*/
+
+SELECT * FROM unique_dogs; 
+//increment dog_id
+Adding in AUTO_INCREMENT:
+
+CREATE TABLE unique_dogs2 (
+    dog_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100),
+    age INT,
+    PRIMARY KEY (cat_id)
+);
+INSERT a couple new cats:
+
+INSERT INTO unique_dogs2(name, age) VALUES('salt', 48);
+INSERT INTO unique_dogs2(name, age) VALUES('supa', 35);
+INSERT INTO unique_dogs2(name, age) VALUES('rino', 43);
+INSERT INTO unique_dogs2(name, age) VALUES('jim', 83);
+INSERT INTO unique_dogs2(name, age) VALUES('beck', 34);
+/*what happens*/
+
+SELECT * FROM unique_dogs2; 

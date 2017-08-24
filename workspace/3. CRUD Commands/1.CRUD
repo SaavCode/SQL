@@ -1,0 +1,6 @@
+CREATE
+READ
+UPDATE
+DELETE
+
+INSERT INTO dogs(name, age) VALUES(‘raymun’, 24); 

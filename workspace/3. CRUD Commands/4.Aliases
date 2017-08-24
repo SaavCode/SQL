@@ -1,0 +1,7 @@
+Intro to Aliases
+
+SELECT dog_id AS id, name FROM dogsTable;
+ 
+SELECT name AS 'dog name', breed AS 'husky breed' FROM dogsTable;
+ 
+DESC dogsTable;
