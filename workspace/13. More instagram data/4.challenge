@@ -1,0 +1,29 @@
+/*-- 4. Identify most popular photo (and user who created it)*/
+
+/*get username, photo id, url, total*/
+SELECT 
+    username,
+    /*id from photos*/
+    photos.id,
+    /*url from photos*/
+    photos.image_url, 
+    /*get total, from grouped photo_id*/
+    COUNT(*) AS total
+FROM photos
+/*where photo id matches*/
+
+INNER JOIN likes
+    ON likes.photo_id = photos.id
+/**/
+
+/*inner join to include username*/
+INNER JOIN users
+    ON photos.user_id = users.id
+
+/*group by the id of the photo*/
+/*allows count*/
+GROUP BY photos.id
+/*descending*/
+ORDER BY total DESC
+/*need only the winner*/
+LIMIT 1;

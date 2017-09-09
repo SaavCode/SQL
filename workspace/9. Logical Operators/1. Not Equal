@@ -1,0 +1,10 @@
+/*where released_year is equal to 2017*/
+SELECT title FROM books WHERE released_year = 2017;
+ /*not equal*/
+SELECT title FROM books WHERE released_year != 2017;
+ /*show title author_lname*/
+SELECT title, author_lname FROM books;
+ /* where last neame is ness*/
+SELECT title, author_lname FROM books WHERE author_lname = 'ness';
+ /*where last name is not ness*/
+SELECT title, author_lname FROM books WHERE author_lname != 'ness';

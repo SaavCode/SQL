@@ -1,0 +1,40 @@
+select substring('hello world', 1 , 4) //prints hello
+select substring('hell world', 3 , 8)//llo world
+select substring('hello world', -3)//rld
+select substring("Where I'm Calling Froom: Selecred Stories", 1, 10);
+
+//shortcut substr()
+ 
+SELECT SUBSTRING('Hello World', 7);
+ 
+SELECT SUBSTRING('Hello World', -3);
+ 
+SELECT SUBSTRING('Hello World', -7);
+ 
+SELECT title FROM books;
+ 
+SELECT SUBSTRING("Where I'm Calling From: Selected Stories", 1, 10);
+ 
+SELECT SUBSTRING(title, 1, 10) FROM books;
+ 
+SELECT SUBSTRING(title, 1, 10) AS 'short title' FROM books;
+ 
+SELECT SUBSTR(title, 1, 10) AS 'short title' FROM books;
+ 
+SELECT CONCAT
+    (
+        SUBSTRING(title, 1, 10),
+        '...'
+    )
+FROM books;
+ 
+source book_code.sql
+ 
+SELECT CONCAT
+    (
+        SUBSTRING(title, 1, 10),
+        '...'
+    ) AS 'short title'
+FROM books;
+ 
+source book_code.sql

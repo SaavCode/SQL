@@ -1,0 +1,19 @@
+ /*Logical OR*/
+ /*one of the both conditions must be true*/
+SELECT 
+    title, 
+    author_lname, 
+    released_year 
+FROM books
+WHERE author_lname='Saavedra' || released_year > 2016;
+ 
+ /*one of the 3 conditions must be true*/
+ 
+SELECT title, 
+       author_lname, 
+       released_year, 
+       stock_quantity 
+FROM   books 
+WHERE  author_lname = 'Saavedra' 
+              || released_year > 2016 
+OR     stock_quantity > 50;

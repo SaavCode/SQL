@@ -1,0 +1,18 @@
+/*order by released_year*/
+SELECT title, released_year FROM books ORDER BY released_year;
+
+ /*released_year after 2000*/
+SELECT title, released_year FROM books 
+WHERE released_year > 2000 ORDER BY released_year;
+
+ /*released_year 2000 or after*/
+SELECT title, released_year FROM books 
+WHERE released_year >= 2000 ORDER BY released_year;
+
+ /**/
+SELECT title, stock_quantity FROM books;
+ 
+ /*stock_quantity with  more or equal to 100*/
+ 
+SELECT title, stock_quantity FROM books WHERE stock_quantity >= 100;
+ 

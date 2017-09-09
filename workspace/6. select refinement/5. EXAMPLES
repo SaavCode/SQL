@@ -1,0 +1,17 @@
+SELECT title, stock_quantity FROM books;
+ 
+SELECT title, stock_quantity FROM books WHERE stock_quantity LIKE '____';/*where stock quantity is  4 chars long*/
+ 
+SELECT title, stock_quantity FROM books WHERE stock_quantity LIKE '__';/*where stock quantity is  2 chars long*/
+ 
+ 
+(235)234-0987 LIKE '(___)___-____' /*phone form*/
+ 
+ 
+SELECT title FROM books;
+ 
+SELECT title FROM books WHERE title LIKE '%\%%' /*escape sign: where percent is contained*/ 
+ 
+ 
+SELECT title FROM books WHERE title LIKE '%\_%' /*where underscore iscontainaed*/
+ 

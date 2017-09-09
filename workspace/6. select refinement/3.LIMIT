@@ -1,0 +1,32 @@
+
+SELECT title FROM books LIMIT 3;/*first 3*/
+ 
+SELECT * FROM books LIMIT 1;
+ 
+SELECT title, released_year FROM books 
+ORDER BY released_year DESC LIMIT 5;
+ 
+SELECT title, released_year FROM books 
+ORDER BY released_year DESC LIMIT 1;
+ 
+SELECT title, released_year FROM books 
+ORDER BY released_year DESC LIMIT 14;
+ 
+SELECT title, released_year FROM books 
+ORDER BY released_year DESC LIMIT 0,5;
+ /*lets us pick a number for how many results
+ */
+SELECT title, released_year FROM books 
+ORDER BY released_year DESC LIMIT 0,3;          /*limit starting at first value*/
+ 
+SELECT title, released_year FROM books 
+ORDER BY released_year DESC LIMIT 1,3;          /*starting at 2nd value with max 3 values returned*/
+ 
+SELECT title, released_year FROM books 
+ORDER BY released_year DESC LIMIT 10,1;         /*11th place with limit of 1 return value*/
+ 
+SELECT * FROM tbl LIMIT 95,18446744073709551615;/*retrieve all rows*/
+ 
+SELECT title FROM books LIMIT 5;                /*first 5*/
+ 
+SELECT title FROM books LIMIT 5, 123219476457;/*everything after 5*/

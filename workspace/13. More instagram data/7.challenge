@@ -1,0 +1,16 @@
+/*-- 7. Finding the bots - the users who have liked every single photo*/
+
+
+
+SELECT username, 
+     /*total renamed as num_likes*/
+       Count(*) AS num_likes 
+FROM   users 
+     /*know its inner join because i want only users with all likes*/
+       INNER JOIN likes 
+               ON users.id = likes.user_id 
+/**/
+GROUP  BY likes.user_id 
+/*having acts like where, num likes must be equal to the total number of photos*/
+HAVING num_likes = (SELECT Count(*) 
+                    FROM   photos); 

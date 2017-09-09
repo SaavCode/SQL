@@ -1,0 +1,42 @@
+/*create a tabe with a timestamp of now/
+CREATE TABLE comments (
+    content VARCHAR(100),
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+/*timestamp goes from 1970 to 2038*/
+/*datetime goes from 1000 t0 9999*/
+ 
+ /**/
+INSERT INTO comments (content) VALUES('That was not funny');
+ /**/
+INSERT INTO comments (content) VALUES('I dont like it');
+ /**/
+INSERT INTO comments (content) VALUES('blablah');
+ /*orderes by the timestamp, descending order*/
+SELECT * FROM comments ORDER BY created_at DESC;
+
+
+ /*changed at, on update, changes timestamp when row ischanged*/
+CREATE TABLE comments2 (
+    content VARCHAR(100),
+    changed_at TIMESTAMP DEFAULT NOW() ON UPDATE CURRENT_TIMESTAMP
+);
+ /**/
+INSERT INTO comments2 (content) VALUES('PEWPEWPEW');
+ /**/
+INSERT INTO comments2 (content) VALUES('NONONONO');
+ /**/
+INSERT INTO comments2 (content) VALUES('I LIKE PIZZA');
+ /**/
+UPDATE comments2 SET content='HELLO' WHERE content='PEWPEWE';
+ /*ORDERED BY DEFAULT*/
+SELECT * FROM comments2;
+ /*ORDER BY WHEN IT WAS UPDATED*/
+SELECT * FROM comments2 ORDER BY changed_at;
+ 
+ 
+
+
+
+ 

@@ -1,0 +1,24 @@
+<head>
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <!--app.css-->
+    <link rel="stylesheet" href="/app.css">
+</head>
+
+<body>
+    <!-- container 1 -->
+    <div class="flex-container">
+        <!--  container 2-->
+    <div class="container">
+        <h1>SUBSCRIBE NOW!</h1>
+        <!-- in strong recieve count from app.js-->
+        <p class="lead">Give me your email <strong><%= count %></strong> peoople on our list. We are 100% not a cult. </p>
+        
+        <!--post request, use action to route-->
+        <form method="POST" action='/register'>
+            <input type="text" class="form" name="email" placeholder="Enter Your Email">
+            <button>Subscribe Now</button>
+        </form>
+    </div>
+</div>
+</body>

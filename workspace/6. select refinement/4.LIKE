@@ -1,0 +1,12 @@
+/*for better searching, like is to compare parts of a title or book*/
+SELECT title, author_fname FROM books WHERE author_fname LIKE '%da%';/*author fname contains da in whole name*/
+
+/*% help us choose where chars should be%*/
+ 
+SELECT title, author_fname FROM books WHERE author_fname LIKE 'da%'; /*author fname starts with da */
+ 
+SELECT title FROM books WHERE  title LIKE 'the';
+ 
+SELECT title FROM books WHERE  title LIKE '%the';/*ends with the*/
+ 
+SELECT title FROM books WHERE title LIKE '%the%';/*everything with the*/

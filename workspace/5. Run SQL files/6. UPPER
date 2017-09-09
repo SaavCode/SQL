@@ -1,0 +1,9 @@
+SELECT UPPER('Hello World');//TO UPPER CASE
+ 
+SELECT LOWER('Hello World'); //to lower case
+ 
+SELECT UPPER(title) FROM books;to UPPER
+ 
+SELECT CONCAT('MY FAVORITE BOOK IS ', UPPER(title)) FROM books;//COMBINES WITH UPPER CASE TITLE
+ 
+SELECT CONCAT('MY FAVORITE BOOK IS ', LOWER(title)) FROM books;

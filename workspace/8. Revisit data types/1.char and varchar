@@ -1,0 +1,12 @@
+/*char is faster for fixed length text*/
+/*create one row car and another varchar*/
+CREATE TABLE dogs (name CHAR(5), breed VARCHAR(10));
+ /*insert values*/
+INSERT INTO dogs (name, breed) VALUES ('tom', 'husky');
+/*insert again*/ 
+INSERT INTO dogs (name, breed) VALUES ('kirk', 'poodle');
+/*if the name is longer than 5 charachter then it gets cut off*/ 
+INSERT INTO dogs (name, breed) VALUES ('rick', 'golden');
+ /**/
+SELECT * FROM dogs;
+ 

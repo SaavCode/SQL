@@ -1,0 +1,27 @@
+/*only gets min pages*/
+SELECT * FROM books 
+WHERE pages = (SELECT Min(pages) 
+                FROM books); 
+ 
+SELECT title, pages FROM books 
+WHERE pages = (SELECT Max(pages) 
+                FROM books); 
+                
+ /*sub query whree pages = select...*/
+SELECT title, pages FROM books 
+WHERE pages = (SELECT Min(pages) 
+                FROM books); 
+                
+ /*order by ascending pages with a limit of 1*/
+SELECT * FROM books 
+ORDER BY pages ASC LIMIT 1;
+
+/*order by ascending pages, limit of 1*/
+ 
+SELECT title, pages FROM books 
+ORDER BY pages ASC LIMIT 1;
+
+/*order by descending pages limit of 1*/
+ 
+SELECT * FROM books 
+ORDER BY pages DESC LIMIT 1;

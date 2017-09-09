@@ -1,0 +1,12 @@
+/*-- 3. Identify Inactive Users (users with no photos)*/
+
+/*get the username*/
+SELECT username
+/*table users*/
+FROM users
+/*get all photos information*/
+LEFT JOIN photos
+/*that matches user id*/
+    ON users.id = photos.user_id
+    /*users with no photos*/
+WHERE photos.id IS NULL;

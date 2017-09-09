@@ -1,0 +1,30 @@
+ /*Logical AND*/
+ 
+  /*books published by Saavedra*/
+
+SELECT title, author_lname, released_year FROM books
+WHERE author_lname='Saavedra';
+ 
+  /*books released after 2016*/
+ 
+SELECT title, author_lname, released_year FROM books
+WHERE released_year > 2016;
+ 
+ 
+  /*both where and AND have to be true*/
+ 
+SELECT  
+    title, 
+    author_lname, 
+    released_year FROM books
+WHERE author_lname='Saavedra' 
+    AND released_year > 2016;
+ 
+
+ /*All 3 conditions must be true*/
+
+SELECT * 
+FROM books
+WHERE author_lname='Saavedra' 
+    AND released_year > 2016 
+    AND title LIKE '%novel%';

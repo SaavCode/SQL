@@ -1,0 +1,17 @@
+/*min and max*/
+/*select earliest year*/
+SELECT MIN(released_year) 
+FROM books;
+ /*select earliest year*/
+SELECT MIN(released_year) FROM books;
+ /**/
+SELECT MIN(pages) FROM books;
+ /*max amount of pages*/
+SELECT MAX(pages) 
+FROM books;
+ /*select lates released year*/
+SELECT MAX(released_year) 
+FROM books;
+ /*show books with most pages*/
+SELECT MAX(pages), title
+FROM books;

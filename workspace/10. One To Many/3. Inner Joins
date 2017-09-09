@@ -1,0 +1,49 @@
+/*-- IMPLICIT INNER JOIN*/
+/* select where customers.id is the same as orders id*/
+
+SELECT * FROM customers, orders 
+WHERE customers.id = orders.customer_id;
+/*-- IMPLICIT INNER JOIN*/
+
+/*select columns from both tables */
+
+SELECT first_name, last_name, order_date, amount
+FROM customers, orders 
+    WHERE customers.id = orders.customer_id;
+    
+    
+/*-- EXPLICIT INNER JOINS*/
+/*where both tables overlap*/
+/*join orders where customers.id is the same as orders id */
+
+/*more readable */
+
+SELECT * FROM customers
+JOIN orders
+    ON customers.id = orders.customer_id;
+ /* joins both tables */
+   
+   
+   
+SELECT first_name, last_name, order_date, amount 
+FROM customers
+JOIN orders
+    ON customers.id = orders.customer_id;
+    /* selected only some columns*/
+
+
+/*order does not matter, only for presentation */
+
+SELECT *
+FROM orders
+JOIN customers
+
+    ON customers.id = orders.customer_id;
+    
+    
+/*-- ARBITRARY JOIN - meaningless, but still possible */
+/* */
+
+
+SELECT * FROM customers
+JOIN orders ON customers.id = orders.id;

@@ -1,0 +1,26 @@
+/*min and max with group by*/
+
+/*show author and their first released_year*/
+SELECT author_fname, 
+       author_lname, 
+       Min(released_year) 
+FROM   books 
+GROUP  BY author_lname, 
+          author_fname;
+ 
+ /* find the longest page count for each author*/
+SELECT
+  author_fname,
+  author_lname,
+  Max(pages)
+FROM books
+GROUP BY author_lname,
+         author_fname;
+ 
+ /* put together authors full name and change table name*/
+SELECT
+  CONCAT(author_fname, ' ', author_lname) AS author,
+  MAX(pages) AS 'longest book'
+FROM books
+GROUP BY author_lname,
+         author_fname;

@@ -1,0 +1,31 @@
+/*-- Finding Orders Placed By George: 2 Step Process*/
+/*empty set*/
+SELECT id FROM customers WHERE last_name='George';
+
+SELECT * FROM orders WHERE customer_id = 1;
+
+/*+----+------------+--------+-------------+
+| id | order_date | amount | customer_id |
++----+------------+--------+-------------+
+|  3 | 2016-02-10 |  99.99 |           1 |
+|  4 | 2017-11-11 |  35.50 |           1 |
++----+------------+--------+-------------+
+*/
+
+
+/*-- Finding Orders Placed By Bagins: Using a subquery*/
+/* */
+
+
+SELECT * FROM orders WHERE customer_id =
+    (
+        SELECT id FROM customers
+        WHERE last_name='Bagins'
+    );
+    
+    
+    
+    /*-- Cross Join Craziness*/
+/*joining both tables, most basic join */
+
+SELECT * FROM customers, orders; 

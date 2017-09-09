@@ -1,0 +1,6 @@
+/*-- 1. Finding 5 oldest users*/
+/*order be the timestamp of created_at, and limit to 5*/
+SELECT * 
+FROM users
+ORDER BY created_at
+LIMIT 5;

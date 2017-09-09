@@ -1,0 +1,18 @@
+/*-- 2. Most Popular Registration Date*/
+/*get the name of the day where most people register*/
+
+SELECT 
+/*day of the week*/
+    DAYNAME(created_at) AS day,
+    /*counts all registrations*/
+    COUNT(*) AS total
+
+FROM users
+
+GROUP BY day
+
+/*descending order*/
+
+ORDER BY total DESC
+/*limit to two days*/
+LIMIT 2;

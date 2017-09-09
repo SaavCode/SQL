@@ -1,0 +1,24 @@
+/*using average*/
+
+/*calculate the average released yeat*/
+
+SELECT AVG(released_year) 
+FROM books;
+ 
+ /*calculate the average amount of pages*/
+SELECT AVG(pages) 
+FROM books;
+ 
+ /*calculate the average stock and group by year*/
+SELECT AVG(stock_quantity) 
+FROM books 
+GROUP BY released_year;
+ 
+ /*get the average quantity and froup by realeased year*/
+SELECT released_year, AVG(stock_quantity) 
+FROM books 
+GROUP BY released_year;
+ 
+ /*show average pages for each author*/
+SELECT author_fname, author_lname, AVG(pages) FROM books
+GROUP BY author_lname, author_fname;

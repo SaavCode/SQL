@@ -1,0 +1,10 @@
+//will reverse a string
+SELECT REVERSE('Hello World');//dlrow olleh
+ 
+SELECT REVERSE('meow meow');//woem woem
+ 
+SELECT REVERSE(author_fname) FROM books;
+ 
+SELECT CONCAT('woof', REVERSE('woof'));
+ 
+SELECT CONCAT(author_fname, REVERSE(author_fname)) FROM books;

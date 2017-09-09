@@ -1,0 +1,18 @@
+/*where title is W, has to be exact match: so only w*/
+SELECT title FROM books WHERE title LIKE 'W';
+
+
+ /*where title start with the letter W*/
+SELECT title FROM books WHERE title LIKE 'W%';
+
+
+ /*where title contains W anywhere*/
+SELECT title FROM books WHERE title LIKE '%W%';
+
+
+ /*where title starts with the letter w*/
+SELECT title FROM books WHERE title LIKE 'W%';
+
+
+ /*where title does not start with the letter w*/
+SELECT title FROM books WHERE title NOT LIKE 'W%';
